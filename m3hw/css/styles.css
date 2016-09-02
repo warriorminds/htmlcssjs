@@ -1,0 +1,17 @@
+ul#nav-list {
+	text-align: center;
+}
+
+div section.content{
+	min-height: 550px;
+	background-color: gray;
+	padding: 20px;
+	margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+	div section.content {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+}
