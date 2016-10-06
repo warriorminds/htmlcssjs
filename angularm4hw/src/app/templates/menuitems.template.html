@@ -1,5 +1,2 @@
-<ul>
-  <li ng-repeat="item in $ctrl.items">
-    {{ item.name }}, {{ item.short_name }}, {{ item.description }}
-  </li>
-</ul>
+<h3>Menu Items for: {{ menuList.name }}</h3>
+<menu-items items="menuList.items"></menu-items>

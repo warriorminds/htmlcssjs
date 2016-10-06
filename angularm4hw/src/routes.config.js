@@ -23,12 +23,12 @@
 				}
 			})
 			.state('mainList.itemDetail', {
-				url: '/item-detail/{itemId}',
-				templateUrl: 'src/app/templates/menuitemslist.template.html',
+				url: '/item-detail/{name}/{categoryId}',
+				templateUrl: 'src/app/templates/menuitems.template.html',
 				controller: 'MenuItemsListController as menuList',
 				resolve: {
-					items: ['MenuDataService', function (MenuDataService) {
-						return MenuDataService.getItemsForCategory();
+					items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+						return MenuDataService.getItemsForCategory($stateParams.categoryId);
 					}]
 				}
 			});

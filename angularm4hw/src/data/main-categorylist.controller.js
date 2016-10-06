@@ -1,13 +1,13 @@
 (function () {
 	'use strict';
-	console.log('controller init');
+
 	angular.module('MenuApp')
 		.controller('MainCategoryListController', MainCategoryListController);
 
-	MainCategoryListController.$inject = ['MenuDataService', 'items'];
-	function MainCategoryListController (MenuDataService, items) {
-		var mainList = this;
+	MainCategoryListController.$inject = ['items'];
+	function MainCategoryListController (items) {
 		console.log(items);
+		var mainList = this;
 		mainList.items = items.data;
 	}
 })();
