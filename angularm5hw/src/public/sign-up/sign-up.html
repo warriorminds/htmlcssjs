@@ -3,17 +3,31 @@
       <legend>Sign Up</legend>
       <form name='regForm' novalidate>
 
-        <input type="text" name="username" placeholder="Pick a username"
-          ng-model="signUpCtrl.user.username"
+        <input type="text" name="firstname" placeholder="First Name"
+          ng-model="signUpCtrl.user.firstname"
           required
           minlength="4"
           ng-maxlength="10">
           <span
-            ng-if="(regForm.username.$error.minlength || regForm.username.$error.required) && regForm.username.$touched">
-            Username must be at least 4 characters long
+            ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
+            First Name must be at least 4 characters long
           </span>
-          <span ng-if="regForm.username.$error.maxlength && regForm.username.$touched">
-            Username must not be longer than 10 characters
+          <span ng-if="regForm.firstname.$error.maxlength && regForm.firstname.$touched">
+            First Name must not be longer than 10 characters
+          </span>
+          <br>
+
+          <input type="text" name="lastname" placeholder="Last Name"
+          ng-model="signUpCtrl.user.lastname"
+          required
+          minlength="4"
+          ng-maxlength="10">
+          <span
+            ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
+            Last Name must be at least 4 characters long
+          </span>
+          <span ng-if="regForm.lastname.$error.maxlength && regForm.lastname.$touched">
+            Last Name must not be longer than 10 characters
           </span>
           <br>
 
@@ -42,7 +56,8 @@
 
           	<div id="info" ng-if="signUpCtrl.completed">
           	  Information has been saved: <br>
-		      Username: {{ signUpCtrl.user.username}} <br>
+		      First Name: {{ signUpCtrl.user.firstname}} <br>
+		      Last Name: {{ signUpCtrl.user.lastname}} <br>
 		      Email: {{ signUpCtrl.user.email}} <br>
 		      Phone: {{ signUpCtrl.user.phone }}
 	    	</div>

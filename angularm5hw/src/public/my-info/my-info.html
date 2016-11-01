@@ -1,7 +1,8 @@
 <div class="container">
 
-	<div id="info" ng-if="myInfoCtrl.user.username !== undefined">
-	    Username: {{ myInfoCtrl.user.username}} <br>
+	<div id="info" ng-if="myInfoCtrl.user.firstname !== undefined">
+	    First Name: {{ myInfoCtrl.user.firstname}} <br>
+		Last Name: {{ myInfoCtrl.user.lastname}} <br>
 	    Email: {{ myInfoCtrl.user.email}} <br>
 	    Phone: {{ myInfoCtrl.user.phone }}
 	</div>
@@ -9,7 +10,7 @@
 	<br>
 	<menu-item ng-if="myInfoCtrl.user.favoriteDish !== undefined" menu-item="myInfoCtrl.user.favoriteDish"></menu-item>
 
-	<div id="info" ng-show="myInfoCtrl.user.username === undefined">
+	<div id="info" ng-show="myInfoCtrl.user.firstname === undefined">
 	Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
 	</div>
 </div>
