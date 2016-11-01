@@ -7,7 +7,7 @@
 	</div>
 
 	<br>
-	<menu-item menu-item="myInfoCtrl.user.favoriteDish"></menu-item>
+	<menu-item ng-if="myInfoCtrl.user.favoriteDish !== undefined" menu-item="myInfoCtrl.user.favoriteDish"></menu-item>
 
 	<div id="info" ng-show="myInfoCtrl.user.username === undefined">
 	Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
